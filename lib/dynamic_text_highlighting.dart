@@ -148,8 +148,11 @@ class DynamicTextHighlighting extends StatelessWidget {
     } else {
       return TextSpan(
         text: value,
-        style: style.copyWith(
-          // backgroundColor: color,
+        // style: style.copyWith(
+        //   // backgroundColor: color,
+        //   color: color,
+        // ),
+        style: TextStyle(
           color: color,
         ),
       );
@@ -175,16 +178,16 @@ class DynamicTextHighlighting extends StatelessWidget {
   AutoSizeText _richText(TextSpan text) {
     return AutoSizeText.rich(
       text,
-      // key: key,
+      key: key,
       textAlign: textAlign,
       textDirection: textDirection,
       softWrap: softWrap,
       overflow: overflow,
-      textScaleFactor: textScaleFactor,
+      // textScaleFactor: textScaleFactor,
       minFontSize: minFontSize,
       maxLines: maxLines,
-      locale: locale,
-      strutStyle: strutStyle,
+      // locale: locale,
+      // strutStyle: strutStyle,
       // style: style,
     );
   }
