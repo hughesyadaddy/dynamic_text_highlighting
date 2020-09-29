@@ -141,15 +141,16 @@ class DynamicTextHighlighting extends StatelessWidget {
       return TextSpan(
         text: value,
         style: style.copyWith(
-          color: Colors.black,
-          backgroundColor: color,
+          color: color,
+          // backgroundColor: color,
         ),
       );
     } else {
       return TextSpan(
         text: value,
         style: style.copyWith(
-          backgroundColor: color,
+          // backgroundColor: color,
+          color: color,
         ),
       );
     }
@@ -174,7 +175,7 @@ class DynamicTextHighlighting extends StatelessWidget {
   AutoSizeText _richText(TextSpan text) {
     return AutoSizeText.rich(
       text,
-      key: key,
+      // key: key,
       textAlign: textAlign,
       textDirection: textDirection,
       softWrap: softWrap,
