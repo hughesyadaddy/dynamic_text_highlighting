@@ -42,7 +42,7 @@ class DynamicTextHighlighting extends StatelessWidget {
     this.overflow = TextOverflow.clip,
     this.textScaleFactor = 1.0,
     this.maxLines,
-    this.minFontSize = 12,
+    this.minFontSize,
     this.locale,
     this.strutStyle,
     this.textWidthBasis = TextWidthBasis.parent,
