@@ -37,7 +37,7 @@ class DynamicTextHighlighting extends StatelessWidget {
     //DynamicTextHighlighting
     Key key,
     this.text,
-    this.highlights,
+    this.highlights = const [],
     this.color = Colors.yellow,
     this.style,
     this.caseSensitive = false,
