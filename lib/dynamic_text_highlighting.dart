@@ -50,7 +50,7 @@ class DynamicTextHighlighting extends StatelessWidget {
   })  : assert(text != null),
         assert(highlights != null),
         assert(color != null),
-        assert(style != null),
+        // assert(style != null),
         assert(caseSensitive != null),
         assert(textAlign != null),
         assert(softWrap != null),
