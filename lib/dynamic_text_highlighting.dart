@@ -141,8 +141,8 @@ class DynamicTextHighlighting extends StatelessWidget {
       return TextSpan(
         text: value,
         style: style.copyWith(
-          // color: Colors.black,
-          backgroundColor: color,
+          color: color,
+          // backgroundColor: color,
         ),
       );
     } else {
@@ -159,14 +159,14 @@ class DynamicTextHighlighting extends StatelessWidget {
     if (style.color == null) {
       return TextSpan(
         text: value,
-        style: style.copyWith(
-            // color: Colors.black,
-            ),
+        // style: style.copyWith(
+        //   color: Colors.black,
+        // ),
       );
     } else {
       return TextSpan(
         text: value,
-        style: style,
+        // style: style,
       );
     }
   }
@@ -184,6 +184,7 @@ class DynamicTextHighlighting extends StatelessWidget {
       maxLines: maxLines,
       locale: locale,
       strutStyle: strutStyle,
+      style: style,
     );
   }
 }
