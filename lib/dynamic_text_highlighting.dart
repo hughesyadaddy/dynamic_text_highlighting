@@ -185,7 +185,7 @@ class DynamicTextHighlighting extends StatelessWidget {
       maxLines: maxLines,
       locale: locale,
       strutStyle: strutStyle,
-      style: style,
+      // style: style,
     );
   }
 }
