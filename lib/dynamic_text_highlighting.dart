@@ -21,10 +21,17 @@ class DynamicTextHighlighting extends StatelessWidget {
   final double textScaleFactor;
   final int maxLines;
   final double minFontSize;
+  final double maxFontSize;
+  final double stepGranularity;
+  final List<double> presetFontSizes;
+  final AutoSizeGroup group;
   final Locale locale;
+  final bool wrapWords;
+  final Widget overflowReplacement;
   final StrutStyle strutStyle;
   final TextWidthBasis textWidthBasis;
   final TextHeightBehavior textHeightBehavior;
+  final String semanticsLabel;
 
   DynamicTextHighlighting({
     //DynamicTextHighlighting
@@ -36,17 +43,25 @@ class DynamicTextHighlighting extends StatelessWidget {
     this.caseSensitive = false,
 
     //RichText
-    this.textAlign,
-    this.textDirection,
-    this.softWrap = true,
-    this.overflow,
-    this.textScaleFactor,
-    this.maxLines,
-    this.minFontSize,
-    this.locale,
-    this.strutStyle,
+
     this.textWidthBasis,
     this.textHeightBehavior,
+    this.strutStyle,
+    this.minFontSize = 12,
+    this.maxFontSize = double.infinity,
+    this.stepGranularity = 1,
+    this.presetFontSizes,
+    this.group,
+    this.textAlign,
+    this.textDirection,
+    this.locale,
+    this.softWrap,
+    this.wrapWords = true,
+    this.overflow,
+    this.overflowReplacement,
+    this.textScaleFactor,
+    this.maxLines,
+    this.semanticsLabel,
   })  : assert(text != null),
         assert(highlights != null),
         // assert(color != null),
@@ -175,16 +190,16 @@ class DynamicTextHighlighting extends StatelessWidget {
     return AutoSizeText.rich(
       text,
       key: key,
+      style: style,
+      strutStyle: strutStyle,
       textAlign: textAlign,
       textDirection: textDirection,
+      locale: locale,
       softWrap: softWrap,
       overflow: overflow,
-      textScaleFactor: textScaleFactor,
-      minFontSize: minFontSize,
+//      textScaleFactor: fontSize / style.fontSize,
       maxLines: maxLines,
-      locale: locale,
-      strutStyle: strutStyle,
-      style: style,
+      semanticsLabel: semanticsLabel,
     );
   }
 }
