@@ -63,7 +63,7 @@ class DynamicTextHighlighting extends StatelessWidget {
     this.maxLines,
     this.semanticsLabel,
   })  : assert(text != null),
-        assert(highlights != null),
+//        assert(highlights != null),
         // assert(color != null),
         // assert(style != null),
 //        assert(caseSensitive != null),
@@ -81,7 +81,7 @@ class DynamicTextHighlighting extends StatelessWidget {
     if (text == '') {
       return _richText(_normalSpan(text));
     }
-    if (highlights.isEmpty) {
+    if (highlights.isEmpty || highlights == null) {
       return _richText(_normalSpan(text));
     }
     for (int i = 0; i < highlights.length; i++) {
