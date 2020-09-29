@@ -40,7 +40,7 @@ class DynamicTextHighlighting extends StatelessWidget {
     this.textDirection,
     this.softWrap = true,
     this.overflow = TextOverflow.clip,
-    this.textScaleFactor = 1.0,
+    this.textScaleFactor,
     this.maxLines,
     this.minFontSize,
     this.locale,
