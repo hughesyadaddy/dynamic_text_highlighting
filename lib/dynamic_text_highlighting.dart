@@ -141,16 +141,15 @@ class DynamicTextHighlighting extends StatelessWidget {
       return TextSpan(
         text: value,
         style: style.copyWith(
-          color: color,
-          // backgroundColor: color,
+          color: Colors.black,
+          backgroundColor: color,
         ),
       );
     } else {
       return TextSpan(
         text: value,
         style: style.copyWith(
-          // backgroundColor: color,
-          color: color,
+          backgroundColor: color,
         ),
       );
     }
@@ -180,12 +179,12 @@ class DynamicTextHighlighting extends StatelessWidget {
       textDirection: textDirection,
       softWrap: softWrap,
       overflow: overflow,
-      // textScaleFactor: textScaleFactor,
+      textScaleFactor: textScaleFactor,
       minFontSize: minFontSize,
       maxLines: maxLines,
-      // locale: locale,
-      // strutStyle: strutStyle,
-      // style: style,
+      locale: locale,
+      strutStyle: strutStyle,
+      style: style,
     );
   }
 }
