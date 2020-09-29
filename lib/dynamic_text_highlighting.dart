@@ -1,7 +1,9 @@
 library dynamic_text_highlighting;
 
-import 'package:flutter/material.dart';
 import 'dart:math';
+
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/material.dart';
 
 class DynamicTextHighlighting extends StatelessWidget {
   //DynamicTextHighlighting
@@ -169,10 +171,10 @@ class DynamicTextHighlighting extends StatelessWidget {
     }
   }
 
-  RichText _richText(TextSpan text) {
-    return RichText(
+  AutoSizeText _richText(TextSpan text) {
+    return AutoSizeText.rich(
+      text,
       key: key,
-      text: text,
       textAlign: textAlign,
       textDirection: textDirection,
       softWrap: softWrap,
@@ -181,8 +183,6 @@ class DynamicTextHighlighting extends StatelessWidget {
       maxLines: maxLines,
       locale: locale,
       strutStyle: strutStyle,
-      textWidthBasis: textWidthBasis,
-      textHeightBehavior: textHeightBehavior,
     );
   }
 }
