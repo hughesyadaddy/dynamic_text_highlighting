@@ -192,7 +192,7 @@ class DynamicTextHighlighting extends StatelessWidget {
     return AutoSizeText.rich(
       text,
       key: key,
-      style: style,
+//      style: style,
       strutStyle: strutStyle,
       textAlign: textAlign,
       textDirection: textDirection,
