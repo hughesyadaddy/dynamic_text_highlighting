@@ -202,6 +202,7 @@ class DynamicTextHighlighting extends StatelessWidget {
       softWrap: softWrap,
       overflow: overflow,
 //      textScaleFactor: fontSize / style.fontSize,
+      minFontSize: minFontSize,
       maxLines: maxLines,
       semanticsLabel: semanticsLabel,
     );
