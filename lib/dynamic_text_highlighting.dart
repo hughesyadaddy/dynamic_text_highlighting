@@ -157,6 +157,7 @@ class DynamicTextHighlighting extends StatelessWidget {
         text: value,
         style: style.copyWith(
           color: color,
+          fontWeight: FontWeight.bold,
 //          color: Colors.black,
 //          backgroundColor: color,
         ),
@@ -166,6 +167,7 @@ class DynamicTextHighlighting extends StatelessWidget {
         text: value,
         style: style.copyWith(
           color: color,
+          fontWeight: FontWeight.bold,
 //          backgroundColor: color,
         ),
       );
